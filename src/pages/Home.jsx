@@ -4,7 +4,7 @@ import Main from '../components/home/Main'
 import Menu from '../components/home/Menu'
 import Temp from '../components/home/Temp'
 import Forcast from '../components/home/Forcast'
-import SunUpDown from '../components/home/sunUpDown'
+import SunUpDown from '../components/home/SunUpDown'
 import OtherDetails from '../components/home/OtherDetails'
 
 const Home = () => {
