@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { WeatherContent } from '../data/WeatherData'
-import Loading from '../../assets/loading'
+import Loading from '../../assets/Loading'
 
 const Temp = () => {
   const { data } = useContext(WeatherContent)
