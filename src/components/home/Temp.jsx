@@ -14,7 +14,7 @@ const Temp = () => {
           </div>
 
           <div>
-            <div className="temp text-[5vh] font-bold leading-12">34.7°C</div>
+            <div className="temp text-[5vh] font-bold leading-9.5">34.7°C</div>
             <div className="max-min opacity-60">27°C / 35°C</div>
           </div>
         </div>
