@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { WeatherContent } from '../data/WeatherData'
 
 const SunUpDown = () => {
+    const { data } = useContext(WeatherContent)
+    if (!data) return <p>Loading....</p>
+
+
     return (
         <div className='w-screen h-auto flex justify-center pt-3'>
             <div className='w-90 h-18 bg-[#1a1b1a] rounded-2xl flex justify-between items-center px-4 pr-2 py-5'>

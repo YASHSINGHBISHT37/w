@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { WeatherContent } from '../data/WeatherData'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
 const Forcast = () => {
+    const { data } = useContext(WeatherContent)
+    if (!data) return <p>Loading....</p>
+    
     return (
         <div className='w-screen h-auto flex justify-center bg-amber-00 mt-3'>
             <Swiper slidesPerView={'auto'} spaceBetween={6} freeMode={true} modules={[FreeMode]} className="mySwiper forecast-con w-90 h-36 bg-[#1a1b1a] rounded-2xl !p-2">

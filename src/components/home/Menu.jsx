@@ -6,14 +6,21 @@ function Menu() {
     const [active, setActive] = useState('weather')
 
     return (
-        <div className='relative w-screen h-auto flex justify-center'>
-            <div className='w-54 h-12 z-[9999] rounded-full  backdrop-blur-3xl fixed bottom-3 flex justify-between items-center border-1 border-white/30'
+        <div className=' w-screen h-auto flex justify-center '>
+            <div className='w-screen h-screen absolute top-0 bg-transparent bg-gradient-to-b from-blue-300 to-blue-900 z-[99] transition-all duration-400 ease-in-out'
+                style={{
+                    opacity: active === 'menu' ? .1 : 0,
+                    pointerEvents: active === 'menu' ? 'auto' : 'none'
+                }}>
+            </div>
+
+            <div className='w-76 h-12 z-[9999] rounded-full  backdrop-blur-3xl fixed bottom-3 flex justify-between items-center border-1 border-white/30 '
                 style={{ backgroundColor: active === 'menu' ? 'rgba(18, 18, 18, 0.8)' : 'transparent' }}>
 
-                <div className={`highLight absolute right-2 w-24 h-8 rounded-2xl bg-blue-400 transition-all duration-300 ease-in-out`}
-                    style={{ left: active === 'weather' ? "4%" : "52%" }}></div>
+                <div className={`highLight absolute right-2 w-24 h-8 rounded-2xl bg-blue-400 transition-all duration-300 ease-in-out `}
+                    style={{ left: active === 'weather' ? "2%" : "34%" }}></div>
 
-                <div className='relative flex justify-center items-center w-full cursor-pointer' onClick={() => setActive('weather')}>
+                <div className='weather relative flex justify-center items-center w-full cursor-pointer' onClick={() => setActive('weather')}>
                     <img src="weather-icons/clear-day.svg" className='w-4 h-4 mr-1' />
                     <p className='text-1xl'>Weather</p>
                 </div>
@@ -29,6 +36,13 @@ function Menu() {
                     <p className='text-1xl'>Menu</p>
                 </div>
 
+                {/* <div className='w-0.5 h-full bg-white/50 rounded-2xl'></div> */}
+
+                <div className='weather relative flex justify-center items-center w-full cursor-pointer' onClick={() => setActive('themes')}>
+                    <p className='text-1xl'>Themes</p>
+                </div>
+
+
             </div>
 
             {/* Extended Menu */}
@@ -39,8 +53,23 @@ function Menu() {
                     opacity: active === 'menu' ? 1 : 0,
                     pointerEvents: active === 'menu' ? 'auto' : 'none',
                 }}>
+
+                {/* <img src="/weather-icons/clear-day.svg" alt="sun-loading" className='w-36 h-36' /> */}
+
+                {/* <h1 class="tracking-tight leading-[2vh] mt-[-2vw] text-center text-white/90">Don’t let the weather surprise you — stay <br /> prepared every day!</h1> */}
+
+                {/* <div className='flex items-center flex-col pt-[5vw] w-screen h-screen absolute top-0 left-0 bg-gradient-to-b from-blue-00 to-blue-00 z-[999] hover:z-[-1]'>
+                    <p class="tracking-tight leading-[2vh] mt-[-2vw] text-center text-white/90 flex flex-col">Don’t let the weather surprise you — stay <br />
+                        <span className='flex justify-center items-center'>
+                            <img src="/weather-icons/clear-day.svg" alt="sun-loading" className='w-4 h-4 pt-0.5' />
+                            prepared every day!
+                            <img src="/weather-icons/clear-day.svg" alt="sun-loading" className='w-4 h-4 pt-0.5' />
+                        </span>
+                    </p>
+                </div> */}
                 <div className={`menu-cont w-90 h-84 bg-[#1a1b1a]/10 backdrop-blur-[0vw] rounded-2xl border-1 border-white/30 flex flex-col justify-between px-5 py-2 text-white fixed transition-all duration-400 ease-in-out`}
                     style={{ bottom: active === 'menu' ? '9vh' : '-60%' }}>
+
 
                     <div className="top w-full h-full flex flex-col">
 
@@ -81,7 +110,7 @@ function Menu() {
 
                     <div className="bottom border-t-[.1vh] border-white/50 w-full h-8 px-1 pt-1 font-bold flex justify-between items-center text-[1.8vh]">
                         <p className="text-white">Website by&nbsp;<span className="text-blue-300">Yash Singh Bisht.</span></p>
-                        <p className="text-white" onClick={() => {}}>Themes</p>
+                        {/* <p className="text-white" onClick={() => { }}>Themes</p> */}
                     </div>
 
                 </div>
