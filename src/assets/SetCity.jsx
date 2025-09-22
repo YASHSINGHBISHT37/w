@@ -8,7 +8,7 @@ const SetCity = () => {
     const handleBlur = (field) => setFocus(prev => ({ ...prev, [field]: false }))
 
     return (
-        <div className="w-screen h-screen relative z-[999] flex flex-col justify-end items-center p-4 pt-0 bg-[#1a1b1a]  gap-16">
+        <div className="w-screen h-screen relative z-[999] flex flex-col justify-end items-center p-4 bg-[#1a1b1a]  gap-16">
             {/* <Link to='/' className='w-screen h-screen flex justify-center items-center z-[99999]'>
                 <h1 className="w-8 h-8 text-3xl font-bold tracking-tight text-blue-400 text-center">W</h1>
             </Link> */}

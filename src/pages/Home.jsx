@@ -6,7 +6,7 @@ import Forcast from '../components/home/Forecast'
 import SunUpDown from '../components/home/SunUpDown'
 import OtherDetails from '../components/home/OtherDetails'
 import WeatherData from '../components/data/WeatherData'
-import SetCity from '../assets/SetCity'
+// import SetCity from '../assets/SetCity'
 
 const Home = () => {
   const [city, setCity] = useState('')
@@ -14,7 +14,6 @@ const Home = () => {
   return (
     <div className='relative w-screen h-screen bg-transparent bg-gradient-to-b from-blue-500 to-blue-950'>
       <Nav setCity={setCity} />
-      {/* <SetCity /> */}
 
       <WeatherData city={city}>
         <Temp />
@@ -22,6 +21,8 @@ const Home = () => {
         <SunUpDown />
         <OtherDetails />
         <Menu />
+        {/* <SetCity /> */}
+
       </WeatherData>
 
     </div>
